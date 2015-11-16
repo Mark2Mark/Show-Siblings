@@ -10,7 +10,6 @@ Download or clone the whole `Glyphsapp-Plugins`repo (it will contain more plugin
 
 ### Default groups
 
-The default groups are as follows and can be customized in the `Contents/Resources/ShowSiblings.py`, search for the *defaultSiblings* dictionary.
 ```
 c e o
 b p
