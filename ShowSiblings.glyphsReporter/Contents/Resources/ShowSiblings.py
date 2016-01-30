@@ -156,7 +156,10 @@ class ShowSiblings ( NSObject, GlyphsReporterProtocol ):
 						
 						# draw path AND components:
 						NSColor.colorWithCalibratedRed_green_blue_alpha_( 0.0, 0.2, 0.0, 0.2 ).set()
-						thisBezierPathWithComponent = thisLayer.copyDecomposedLayer().bezierPath()
+						try:
+							thisBezierPathWithComponent = thisLayer.copyDecomposedLayer().bezierPath()
+						except:
+							thisBezierPathWithComponent = thisLayer.copyDecomposedLayer().bezierPath
 						if thisBezierPathWithComponent:
 							thisBezierPathWithComponent.fill()
 
