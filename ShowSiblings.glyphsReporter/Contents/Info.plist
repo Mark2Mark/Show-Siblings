@@ -27,7 +27,7 @@
 	<key>productPageURL</key>
 	<string>https://github.com/mark2mark/Show-Siblings</string>
 	<key>productReleaseNotes</key>
-	<string>Customizable Siblings Data & UI</string>
+	<string>Customizable Siblings Data and UI</string>
 	<key>LSHasLocalizedDisplayName</key>
 	<false/>
 	<key>NSAppleScriptEnabled</key>
