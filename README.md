@@ -1,16 +1,24 @@
 # Show Siblings
 
-## Plugin for Glyphsapp
+*This is a plugin for the [Glyphs font editor](http://glyphsapp.com/).*  
 
-This is a Plugin for the [Glyphs font editor](http://glyphsapp.com/). It superimposes a group of predefined glyphs in the background of your letters. This can be both pretty helpful in the beginning of a design as well as at intermediate progress where quick proof overview is needed. The degree of a desired match depends on each design, of course.
+It superimposes a group of predefined glyphs in the background of your letters. This can be both pretty helpful in the beginning of a design as well as at intermediate progress where quick proof overview is needed. The degree of a desired match depends on each design, of course.
+
+### Install
+
+1. Download or clone this repository.
+2. Either:  
+   Double click the `.glyphsReporter` file and confirm the dialogue in Glyphsapp to install.  
+   Or:  
+   Copy the `.glyphsReporter` into your Glyphsapp Plugins folder (eg. `/Library/Application\ Support/Glyphs/Plugins`). You can use subfolders (e.g. to sort plugins by author) there.
+3. Restart Glyphs.
 
 ### How to use
 
-Download or clone the whole `Glyphsapp-Plugins`repo (it will contain more plugins soon) and copy the `ShowSiblings.glyphsReporter` into your Glyphsapp Plugins folder (eg. `/Library/Application\ Support/Glyphs/Plugins`), restart Glyphs and when ever you need it, toggle `Show Siblings` from the view menu.
+When ever you need it, toggle `Show * Siblings` from the view menu.
 
 ### Default groups
 
-The default groups are as follows and can be customized in the `Contents/Resources/ShowSiblings.py`, search for the *defaultSiblings* dictionary.
 ```
 c e o
 b p
@@ -28,20 +36,27 @@ K V X Y
 
 ### Examples
 
+<<<<<<< HEAD
 ![Show Siblings Shequalin Demo](https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/ShowSiblings Shequalin DeutschMark.jpg?raw=true "Show Siblings Shequalin Demo")
 
 ![Show Siblings live Demo](https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/screencapDemoFont.gif?raw=true "Show Siblings live Demo")
+=======
+![Show Siblings Shequalin Demo](https://raw.githubusercontent.com/DeutschMark/Show-Siblings/master/Screenshots/ShowSiblings%20Shequalin%20DeutschMark.jpg?raw=true "Show Siblings Shequalin Demo")
+
+![Show Siblings live Demo](https://raw.githubusercontent.com/DeutschMark/Show-Siblings/master/Screenshots/screencapDemoFont.gif?raw=true "Show Siblings live Demo")
+>>>>>>> origin/master
 
 
-### Known issues
+##### Known issues
 
+- Currently working on Cyrillic and Greek, as well as a Custom Parameter to set up italic construction for `a` and `g`.
 - Removing a component doesn’t update the displayed layer in the group members until the .glyphs file is reopened.
 
-### Pull Requests
+##### Pull Requests
 
 Feel free to comment or pull requests for any improvements.
 
-### License
+##### License
 
 Copyright 2015 [Mark Frömberg](http://www.markfromberg.com/) *@Mark2Mark*
 
@@ -53,8 +68,4 @@ You may obtain a copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+See the License file included in this repository for further details.
