@@ -21,12 +21,14 @@ func()
 
 def availableScripts():
 	scripts = OrderedDict()
-		
+	
+	
 	#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	# + + + START: C U S T O M I Z A B L E + + + 
 	#
 	Latin__Siblings__ = []
+	#### maybe in special function
 	### TAKE CARE TO HAVE NO DOUBLE ENTRIES
 	### !!
 	#************************************
@@ -97,12 +99,9 @@ def availableScripts():
 	Kanji__Siblings__ = []
 	### TAKE CARE TO HAVE NO DOUBLE ENTRIES
 	### !!
-	#************************************
-	# example:	
-	Kanji__Siblings__.append( ("a", "b",) )
-	Kanji__Siblings__.append( ("c", "d", "e",) )
-	
-
+	#************************************		
+	Kanji__Siblings__.append( ("o-cy", "be-cy", "fita-cy", "obarred-cy") )
+	Kanji__Siblings__.append( ("ef-cy", "sha-cy", "iu-cy") )
 
 	#
 	# + + + END: C U S T O M I Z A B L E + + + 
@@ -110,14 +109,10 @@ def availableScripts():
 	#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-
-
-	### DO NOT TOUCH:
 	# for vars, value in OrderedDict(locals()).items():
 	# 	if vars.endswith("__Siblings__"):
 	# 		scripts[vars] = value
 	# return scripts
-
 
 	### DO NOT TOUCH:
 	for var in availableScripts.__code__.co_varnames:
