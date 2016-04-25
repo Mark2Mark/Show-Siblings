@@ -36,15 +36,10 @@ K V X Y
 
 ### Examples
 
-<<<<<<< HEAD
 ![Show Siblings Shequalin Demo](https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/ShowSiblings Shequalin DeutschMark.jpg?raw=true "Show Siblings Shequalin Demo")
 
 ![Show Siblings live Demo](https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/screencapDemoFont.gif?raw=true "Show Siblings live Demo")
-=======
-![Show Siblings Shequalin Demo](https://raw.githubusercontent.com/DeutschMark/Show-Siblings/master/Screenshots/ShowSiblings%20Shequalin%20DeutschMark.jpg?raw=true "Show Siblings Shequalin Demo")
 
-![Show Siblings live Demo](https://raw.githubusercontent.com/DeutschMark/Show-Siblings/master/Screenshots/screencapDemoFont.gif?raw=true "Show Siblings live Demo")
->>>>>>> origin/master
 
 
 ##### Known issues
