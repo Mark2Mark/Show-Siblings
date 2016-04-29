@@ -96,12 +96,12 @@ def availableScripts():
 
 	#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-	Kanji__Siblings__ = []
+	# Kanji__Siblings__ = []
 	### TAKE CARE TO HAVE NO DOUBLE ENTRIES
 	### !!
 	#************************************		
-	Kanji__Siblings__.append( ("o-cy", "be-cy", "fita-cy", "obarred-cy") )
-	Kanji__Siblings__.append( ("ef-cy", "sha-cy", "iu-cy") )
+	# Kanji__Siblings__.append( ("o-cy", "be-cy", "fita-cy", "obarred-cy") )
+	# Kanji__Siblings__.append( ("ef-cy", "sha-cy", "iu-cy") )
 
 	#
 	# + + + END: C U S T O M I Z A B L E + + + 
