@@ -83,4 +83,16 @@ class ShowSiblings(ReporterPlugin):
 		except:
 			print "[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc())
 
+	def inactiveLayers(self, layer):  # def foreground(self, layer):
+		try:
+			self.ShowSiblings2ReporterLIB.drawSiblings(layer, self.getScale() )
+
+			path = layer.copyDecomposedLayer().bezierPath
+			NSColor.blackColor().set()
+			path.fill()
+
+
+		except:
+			print "[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc())
+
 

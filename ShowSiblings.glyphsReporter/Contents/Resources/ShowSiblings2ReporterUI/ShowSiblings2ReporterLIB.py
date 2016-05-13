@@ -50,7 +50,7 @@ class ShowSiblings2ReporterLib(object):
 		self.drawNodes = 0
 		self.R, self.G, self.B = 0.15, 0.40, 0.25 # 0.18, 0.337, 0.859
 
-		print "This is not being printed. WHY? [in Version 2.3b (862) it is printed on Glyphs launch]"
+		# print "This is not being printed. WHY? [in Version 2.3b (862) it is printed on Glyphs launch]"
 
 
 	def Open(self):
