@@ -56,21 +56,30 @@ def availableScripts():
 	#************************************		
 	Cyrillic__Siblings__.append( ("o-cy", "be-cy", "fita-cy", "obarred-cy") )
 	Cyrillic__Siblings__.append( ("ef-cy", "sha-cy", "iu-cy") ) # "zhe-cy"
-	Cyrillic__Siblings__.append( ("el-cy", "de-cy") )
+	Cyrillic__Siblings__.append( ("el-cy", "de-cy", "lje-cy") )
 	Cyrillic__Siblings__.append( ("ka-cy", "k") )
 	Cyrillic__Siblings__.append( ("ve-cy", "softsign-cy", "hardsign-cy") )
-	Cyrillic__Siblings__.append( ("en-cy", "ii-cy", "pe-cy", "tse-cy") )
+	# Cyrillic__Siblings__.append( ("ge-cy", "gheupturn-cy", "pe-cy") )
+	Cyrillic__Siblings__.append( ("en-cy", "ii-cy", "pe-cy", "tse-cy") ) #"ge-cy", 
 	Cyrillic__Siblings__.append( ("ia-cy", "zhe-cy", "x") )
+	Cyrillic__Siblings__.append( ("e-cy", "ereversed-cy", "c", "o") )
+	Cyrillic__Siblings__.append( ("ze-cy", "three") )
 	
-	Cyrillic__Siblings__.append( ("Ii-cy", "H", "N", "Nje-cy") )
+	# Cyrillic__Siblings__.append( ("Ii-cy", "H", "N") ) #, "Nje-cy"
+	Cyrillic__Siblings__.append( ("Ef-cy", "Sha-cy", "Iu-cy") ) # "Zhe-cy"
 	Cyrillic__Siblings__.append( ("El-cy", "De-cy", "Lje-cy") )
-	Cyrillic__Siblings__.append( ("Be-cy", "Ve-cy", "Ge-cy", "Gheupturn-cy", "Softsign-cy") )
+	# Cyrillic__Siblings__.append( ("Ge-cy", "Gheupturn-cy", "Pe-cy") )
+	Cyrillic__Siblings__.append( ("En-cy", "Ii-cy", "Pe-cy", "Tse-cy") ) # "Ge-cy", 
+	# Cyrillic__Siblings__.append( ("Be-cy", "Ve-cy", "Ge-cy", "Gheupturn-cy", "Softsign-cy") )
+	Cyrillic__Siblings__.append( ("Be-cy", "Ve-cy", "Softsign-cy") ) # "Ge-cy", "Gheupturn-cy",
 	Cyrillic__Siblings__.append( ("Ze-cy", "B", "three") )
 	Cyrillic__Siblings__.append( ("Ka-cy", "K", "X") )
-	Cyrillic__Siblings__.append( ("E-cy", "C") )
+	Cyrillic__Siblings__.append( ("E-cy", "Ereversed-cy", "C", "O") )
 	Cyrillic__Siblings__.append( ("Obarred-cy", "O") )
 	Cyrillic__Siblings__.append( ("Ia-cy", "Zhe-cy", "X") )
+	Cyrillic__Siblings__.append( ("Tshe-cy", "Dje-cy") )
 	Cyrillic__Siblings__.append( ("Hardsign-cy", "Yeru-cy") )  # NOT REALLY
+
 
 
 	Greek__Siblings__ = []
@@ -82,9 +91,9 @@ def availableScripts():
 	Greek__Siblings__.append( ("nu", "gamma", "v", "y") )
 	Greek__Siblings__.append( ("zeta", "xi", "sigmafinal", "epsilon", "c") )
 	#Greek__Siblings__.append( ("beta", "germandbls") )
-	Greek__Siblings__.append( ("beta", "germandbls", "rho", "p", "sigma") )
+	Greek__Siblings__.append( ("beta", "germandbls", "rho", "p") ) #"sigma"
 	Greek__Siblings__.append( ("iota", "tau", "i") )
-	Greek__Siblings__.append( ("upsilon", "u", "delta", "theta", "omicron") )
+	Greek__Siblings__.append( ("upsilon", "sigma", "delta", "theta", "omicron") ) # u
 	Greek__Siblings__.append( ("chi", "x") )
 	Greek__Siblings__.append( ("psi", "phi", "omega") )
 
@@ -92,7 +101,8 @@ def availableScripts():
 	Greek__Siblings__.append( ("Xi", "Sigma", "E", "Z") )
 	Greek__Siblings__.append( ("Omega", "O") )
 	Greek__Siblings__.append( ("Phi", "Psi", "U") )
-	Greek__Siblings__.append( ("Theta", "Eta", "Omicron") )
+	Greek__Siblings__.append( ("Theta", "Omicron") )
+	Greek__Siblings__.append( ("Pi", "Eta") )
 
 	#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -113,6 +123,9 @@ def availableScripts():
 	# 	if vars.endswith("__Siblings__"):
 	# 		scripts[vars] = value
 	# return scripts
+
+	# Hangul__Siblings__ = []
+	# Hangul__Siblings__.append( ("Theta", "Eta", "Omicron") )
 
 	### DO NOT TOUCH:
 	for var in availableScripts.__code__.co_varnames:

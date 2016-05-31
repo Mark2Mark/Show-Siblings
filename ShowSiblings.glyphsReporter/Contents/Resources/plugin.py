@@ -25,7 +25,7 @@ class ShowSiblings(ReporterPlugin):
 
 	def settings(self):
 
-		self.menuName = Glyphs.localize({'en': u'* Show Siblings 👫',})
+		self.menuName = Glyphs.localize({'en': u'* Show Siblings',}) #  👫
 
 		try:
 			self.ShowSiblings2ReporterLIB = ShowSiblings2ReporterLIB
@@ -79,7 +79,7 @@ class ShowSiblings(ReporterPlugin):
 
 	def background(self, layer):  # def foreground(self, layer):
 		try:
-			self.ShowSiblings2ReporterLIB.drawSiblings(layer, self.getScale() )
+			self.ShowSiblings2ReporterLIB.drawSiblings(layer, self.getScale(), isActiveLayer=True )
 		except:
 			print "[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc())
 
@@ -89,7 +89,8 @@ class ShowSiblings(ReporterPlugin):
 
 			path = layer.copyDecomposedLayer().bezierPath
 			NSColor.blackColor().set()
-			path.fill()
+			if path:
+				path.fill()
 
 
 		except:

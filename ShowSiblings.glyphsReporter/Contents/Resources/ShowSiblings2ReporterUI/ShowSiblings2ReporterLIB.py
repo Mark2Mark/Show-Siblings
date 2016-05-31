@@ -3,6 +3,9 @@
 ## TODO:
 ## + add .sc support
 
+
+
+
 import sys
 import objc
 from AppKit import *
@@ -133,9 +136,12 @@ class ShowSiblings2ReporterLib(object):
 
 
 
-	def drawSiblings( self, layer, scale ):
+	def drawSiblings( self, layer, scale, isActiveLayer=False ):
 		self.label = []
+		self.labelActive = []
 		self.scale = scale
+		self.isActiveLayer = isActiveLayer
+
 
 		# print self.CAS # custom scripts imported, dict()
 
@@ -151,8 +157,9 @@ class ShowSiblings2ReporterLib(object):
 			activeMasterIndex = masters.index(thisMaster)
 			currentGlyphUnicode = Glyph.unicode
 			niceGlyphName = self.niceGlyphName(Glyph.name)
-			self.activeGlyphName = niceGlyphName ## quickly added for `getLabel() Method`
-			# self.logToConsole(niceGlyphName)
+			if self.isActiveLayer:
+				self.activeGlyphName = niceGlyphName ## quickly added for `labelGlyphNames() Method`
+			
 
 			## leave glyphs out, that are drawn exactly the same in different sripts.
 			## it is better to use components in these cases, instead of having this plugin
@@ -234,11 +241,14 @@ class ShowSiblings2ReporterLib(object):
 				except:
 					alpha = .4/float(1) # avoid division by 0
 				
-				thisSiblings = UI_chosenSiblings[idx]
+				thisSiblings = UI_chosenSiblings[idx]		
 
+				# # reset list if current glyph has no siblings:
+				# if niceGlyphName not in thisSiblings:
+				# 	self.prefwindow.updateList()
 
-				# self.logToConsole("%s<-->%s" % (str(niceGlyphName), str(thisSiblings)))
-				if niceGlyphName in thisSiblings:					
+				# otherwise:
+				if niceGlyphName in thisSiblings:
 					for thisGlyphName in thisSiblings:
 						if niceGlyphName != thisGlyphName:
 
@@ -246,9 +256,23 @@ class ShowSiblings2ReporterLib(object):
 							if sibling == None:
 								sibling = self.Font.glyphForName_(thisGlyphName)
 
+
+							### NEW +++++++++
+							if self.isActiveLayer:
+								self.labelActive.append(sibling.name)
+								# self.prefwindow.w.siblingsList.set( [ x for x in self.labelActive ]  )
+								# self.prefwindow.updateList()
+								self.sibListCopy = self.labelActive # make a copy of the current state, will be passed into labelGlyphNames()
+							### NEW +++++++++
+
+
 							if sibling:
 								thisLayer = sibling.layers[activeMasterIndex]
 								self.label.append(sibling.name)
+								# if self.isActiveLayer == "activeLayer":
+								# 	self.labelActive.append(sibling.name)
+								# 	self.prefwindow.w.siblingsList.set( [ x for x in self.labelActive ]  )
+								# 	print self.labelActive
 
 								try:
 									thisBezierPathWithComponent = thisLayer.copyDecomposedLayer().bezierPath
@@ -300,13 +324,14 @@ class ShowSiblings2ReporterLib(object):
 					self.drawTextAtPoint( "\n".join(self.label), (5, -100), fontColor=NSColor.colorWithCalibratedRed_green_blue_alpha_( self.R, self.G, self.B, 0.4 ) )
 
 		except:
-		 	print traceback.format_exc()
+		 	pass # print traceback.format_exc()
 
 	
-	def getLabel(self):
+	def labelGlyphNames(self, mylist):
 		output = []
 		output.append(self.activeGlyphName)
-		for glyph in self.label:
+		# for glyph in self.label:
+		for glyph in mylist:
 			output.append(glyph)
 		return output
 
@@ -380,25 +405,49 @@ class reporterPreferenceWindow(object):
 		PopUpButton.setID = __setID
 		PopUpButton.getID = __getID
 
+		self.windowWidth = 150
+
 		self.parent = parent
-		y = 10
+		self.y = 10
+		self.mutableY = 0
 		self.w = FloatingWindow((0, 0), "Show Siblings %s" % self.parent.version, closable = False, )
-		self.w.PopUpButtonFillOrStroke = PopUpButton((10, y, -10, 20), self.parent.drawMethods, sizeStyle="small", callback=self.PopUpButtonCallback)
+		self.w.PopUpButtonFillOrStroke = PopUpButton((10, self.y, -10, 20), self.parent.drawMethods, sizeStyle="small", callback=self.PopUpButtonCallback)
 		self.w.PopUpButtonFillOrStroke.setID("DRAWMETHOD")
 
-		y += 25
-		self.w.PopUpButtonScript = PopUpButton((10, y, -10, 20), self.parent.listOfAvailableScripts, sizeStyle="small", callback=self.PopUpButtonCallback)
+		self.y += 25
+		self.w.PopUpButtonScript = PopUpButton((10, self.y, -10, 20), self.parent.listOfAvailableScripts, sizeStyle="small", callback=self.PopUpButtonCallback)
 		self.w.PopUpButtonScript.setID("SCRIPT")
 
-		y += 25
-		self.w.CheckDrawNodes = CheckBox((10, y, -10, 20), "Display Nodes", sizeStyle="small", callback=self.CheckBoxCallback)
+		self.y += 25
+		self.w.CheckDrawNodes = CheckBox((10, self.y, -10, 20), "Display Nodes", sizeStyle="small", callback=self.CheckBoxCallback)
 
-		y += 25
-		self.w.ButtonSiblingsToTab = Button((10, y, -10, 20), "Open Siblings in Tab", sizeStyle="small", callback=self.siblingsToTab)
+		self.y += 25
+		self.w.ButtonSiblingsToTab = Button((10, self.y, -10, 20), "Open Siblings in Tab", sizeStyle="small", callback=self.siblingsToTab)
 		# self.w.ButtonSiblingsToTab = Button((10, y, -10, 20), "Expand Siblings", sizeStyle="small", callback=self.expandSiblingsInTab)
-		y += 25
+		self.y += 25
 
-		self.w.resize(150, y)
+		##### NEW + + + + + + + + +
+		# listRows = 3
+		# listHeight = listRows*22
+		# self.w.siblingsList = List(( 10, self.y, -10, listHeight), [],
+		# 			# selectionCallback=self.selectionCallback,
+		# 			allowsMultipleSelection=False,
+		# 			drawFocusRing=False,
+		# 			rowHeight=20,
+		# 			autohidesScrollers=True,
+		# 			)
+		# self.mutableY += listHeight + 10
+		##### NEW + + + + + + + + +
+		# self.w.resize(self.windowWidth, self.y + self.mutableY + 20)
+		self.w.resize(self.windowWidth, self.y)
+
+	# def updateList(self):
+	# 	thisSiblingList = [ x for x in self.parent.labelActive ]
+	# 	self.mutableY = len(thisSiblingList) * 22
+	# 	self.w.siblingsList.set( thisSiblingList )
+	# 	self.w.siblingsList.resize(self.windowWidth-20, self.mutableY )
+	# 	# self.w.resize(self.windowWidth, self.y + self.mutableY +10) # this slows glyphs down as hell (!) only call on change of active layer
+
 
 	def PopUpButtonCallback(self, sender):
 		try:
@@ -415,20 +464,27 @@ class reporterPreferenceWindow(object):
 
 	def siblingsToTab(self, sender):
 		try:
-			tabOutput = "/" + "/".join( [ x for x in self.parent.getLabel() ] )
+			tabOutput = "/" + "/".join( [ x for x in self.parent.labelGlyphNames(self.parent.sibListCopy) ] )
 			self.parent.Font.newTab(tabOutput)
 		except:
-			print traceback.format_exc()
+			print traceback.format_exc() # this does not work sometimes?!?!?!*
+			# *) always after changing active layer via keys: fn+left/right
+			#    Once you clicked in the view, the tab opening works
 
-	def expandSiblingsInTab(self, sender):
-		'''
-		*UC* because it inserts e.g. "/be-cy" and not the glyph, like newTab() does
-		'''
-		try:
-			view = self.parent.Glyphs.font.currentTab.graphicView()
-			tabOutput = "/" + "/".join( [ x for x in self.parent.getLabel() ] )
-			# self.parent.Font.newTab(tabOutput)
-			view.insertText_replacementRange_(tabOutput, (0, 0))
-		except:
-			print traceback.format_exc()			
+
+
+	# def expandSiblingsInTab(self, sender):
+	# 	'''
+	# 	*UC* because it inserts e.g. "/be-cy" and not the glyph, like newTab() does
+	# 	'''
+	# 	try:
+	# 		view = self.parent.Glyphs.font.currentTab.graphicView()
+	# 		tabOutput = "/" + "/".join( [ x for x in self.parent.labelGlyphNames() ] )
+	# 		# self.parent.Font.newTab(tabOutput)
+	# 		view.insertText_replacementRange_(tabOutput, (0, 0))
+	# 	except:
+	# 		print traceback.format_exc()			
+
+
+
 
