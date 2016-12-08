@@ -25,7 +25,7 @@ class ShowSiblings(ReporterPlugin):
 
 	def settings(self):
 
-		self.menuName = Glyphs.localize({'en': u'* Show Siblings',}) #  👫
+		self.menuName = Glyphs.localize({'en': u'Show Siblings',}) #  👫
 
 		try:
 			self.ShowSiblings2ReporterLIB = ShowSiblings2ReporterLIB
