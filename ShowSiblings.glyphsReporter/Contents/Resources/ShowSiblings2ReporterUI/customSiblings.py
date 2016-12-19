@@ -35,6 +35,7 @@ def availableScripts():
 	########
 	Latin__Siblings__.append( ("c", "e", "o") ) # "eth"
 	Latin__Siblings__.append( ("b", "p") )
+	Latin__Siblings__.append( ("d", "q") )
 	########
 
 	Latin__Siblings__.append( ("i", "j") )
