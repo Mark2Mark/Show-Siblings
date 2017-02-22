@@ -6,6 +6,15 @@ It superimposes a group of predefined glyphs in the background of your letters. 
 
 ### Install
 
+In *Glyphs > Preferences > Addons > Modules*, click on the *Install Modules* button. This installs the Vanilla module by Tal Leming which is required by the *Show Siblings* plug-in.
+
+Then either:
+
+1. In *Window > Plugin Manager*, click on the *Install* button next to the *Show Siblings* entry. 
+2. Restart Glyphs.
+
+or:
+
 1. Download or clone this repository.
 2. Either:  
    Double click the `.glyphsReporter` file and confirm the dialogue in Glyphsapp to install.  
@@ -15,7 +24,7 @@ It superimposes a group of predefined glyphs in the background of your letters. 
 
 ### How to use
 
-When ever you need it, toggle `Show * Siblings` from the view menu.
+When ever you need it, toggle `Show * Siblings` from the *View* menu.
 
 ### Default groups (current status)
 
