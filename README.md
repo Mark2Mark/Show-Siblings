@@ -83,10 +83,13 @@ GREEK
 
 ### Examples
 
-![Show Siblings Shequalin Demo](https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/ShowSiblings Shequalin DeutschMark.jpg?raw=true "Show Siblings Shequalin Demo")
+<p align="center">
 
-![Show Siblings live Demo](https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/screencapDemoFont.gif?raw=true "Show Siblings live Demo")
+<img src="https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/ShowSiblings Shequalin DeutschMark.jpg" alt="Show Siblings Shequalin Demo" height="300px">
 
+<img src="https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/screencapDemoFont.gif" alt="Show Siblings live Demo" height="300px">
+
+</p>
 
 
 ##### Known issues
