@@ -85,7 +85,7 @@ GREEK
 
 <p align="center">
 
-<img src="https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/ShowSiblings Shequalin DeutschMark.jpg" alt="Show Siblings Shequalin Demo" height="300px">
+<img src="https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/ShowSiblings Shequalin DeutschMark.jpg" alt="Show Siblings Shequalin Demo" height="600px">
 
 <img src="https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/screencapDemoFont.gif" alt="Show Siblings live Demo" height="300px">
 
