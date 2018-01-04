@@ -8,14 +8,11 @@
 
 import sys
 import objc
-from AppKit import *
+from Foundation import NSAttributedString, NSRect
+from AppKit import NSApplication, NSColor, NSBezierPath, NSForegroundColorAttributeName, NSFontAttributeName
 from vanilla import *
 import traceback
 
-MainBundle = NSBundle.mainBundle()
-path = MainBundle.bundlePath()+"/Contents/Scripts"
-if not path in sys.path:
-	sys.path.append(path)
 import GlyphsApp
 
 from customSiblings import availableScripts as customAvailableScripts
