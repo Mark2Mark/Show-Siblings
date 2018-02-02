@@ -2,9 +2,6 @@
 <a href='https://ko-fi.com/M4M580HG' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 </p>
 
----
-
-
 # Show Siblings (free version)
 
 *This is a plugin for the [Glyphs font editor](http://glyphsapp.com/).*  
@@ -85,9 +82,7 @@ GREEK
 
 </p>
 
-
 ---
-
 
 # Pro Version (coming soon)
 
@@ -113,9 +108,7 @@ GREEK
 - Temporary sibling: show *any* glyph in as a “sibling”. No need to paste actual glyphs or components into the background layer anymore. (And forgetting them there, cluttering your files.)
 - Open all siblings in a new tab.
 
-
 ---
-
 
 ##### Known issues of the free version
 
