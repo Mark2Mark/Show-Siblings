@@ -82,6 +82,8 @@ GREEK
 
 </p>
 
+---
+
 ### Pro Version (coming soon)
 
 <p align="center">
@@ -105,8 +107,9 @@ GREEK
 - Toggle display of siblings
 - Temporary sibling: show *any* glyph in as a “sibling”. No need to paste actual glyphs or components into the background layer anymore. (And forgetting them there, cluttering your files.)
 
+---
 
-##### Known issues
+##### Known issues of the free version
 
 - Currently working on Cyrillic and Greek, as well as a Custom Parameter to set up italic construction for `a` and `g`.
 - Removing a component doesn’t update the displayed layer in the group members until the .glyphs file is reopened.
