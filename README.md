@@ -84,7 +84,7 @@ GREEK
 
 ---
 
-### Pro Version (coming soon)
+# Pro Version (coming soon)
 
 <p align="center">
 
@@ -92,7 +92,7 @@ GREEK
 
 </p>
 
-#### Features:
+### Features:
 
 - More Scripts: Latin, Cyrillic, Greek, Thai, Khmer, Myanmar, Hangul, …
 - “Twins” (alternative glyphs like `.ssXX` or any other suffixes).
