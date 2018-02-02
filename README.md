@@ -94,19 +94,19 @@ GREEK
 
 ### Features:
 
-- More Scripts: Latin, Cyrillic, Greek, Thai, Khmer, Myanmar, Hangul, …
-- “Twins” (alternative glyphs like `.ssXX` or any other suffixes).
-- Movable siblings: Perfectly position them behind the current glyph.
-- Match Highlighter: if a node of the current glyph matches a background node, you’ll get visual feedback.
-- Drawing modes:
+- **More Script:** Latin, Cyrillic, Greek, Thai, Khmer, Myanmar, Hangul, …
+- **Twins:** Alternative glyphs like `.ssXX` or any other suffixes.
+- **Movable siblings:** Perfectly position them behind the current glyph.
+- **Match Highlighter:** If a node of the current glyph matches a background node, you’ll get visual feedback.
+- **Drawing modes:**
     + Flat filled
     + Flat filled with outline
     + Outline only
     + Outline only with removed overlaps
-- Toggle display all nodes of all siblings
-- Toggle display of siblings
-- Temporary sibling: show *any* glyph in as a “sibling”. No need to paste actual glyphs or components into the background layer anymore. (And forgetting them there, cluttering your files.)
-- Open all siblings in a new tab.
+- **Show nodes:** Toggle display all nodes of all siblings
+- **Don’t show siblings:** Toggle display of siblings
+- **Temporary sibling:** show *any* glyph in as a “sibling”. No need to paste actual glyphs or components into the background layer anymore. (And forgetting them there, cluttering your files.)
+- **Open Tab** with all siblings.
 
 ---
 
