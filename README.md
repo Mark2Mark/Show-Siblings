@@ -93,7 +93,7 @@ GREEK
 
 <img src="https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/screencapDemoFont.gif" alt="Show Siblings live Demo" height="300px">
 
-<img src="https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/ShowSiblingsPro_01.gif" alt="Show Siblings Pro Teaser" height="300px">
+<img src="https://github.com/Mark2Mark/Show-Siblings/blob/master/Screenshots/ShowSiblingsPro_01.gif" alt="Show Siblings Pro Teaser" height="300px">
 
 </p>
 
