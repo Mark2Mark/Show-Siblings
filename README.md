@@ -29,7 +29,7 @@ When ever you need it, toggle `Show Siblings` from the *View* menu.
 
 ---
 
-# Pro Version (coming soon)
+# ✨Pro Version (coming soon)✨
 
 <p align="center">
 
