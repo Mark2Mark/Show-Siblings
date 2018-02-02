@@ -2,7 +2,7 @@
 <a href='https://ko-fi.com/M4M580HG' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 </p>
 
-# Show Siblings
+# Show Siblings (free version)
 
 *This is a plugin for the [Glyphs font editor](http://glyphsapp.com/).*  
 
@@ -10,25 +10,12 @@ It superimposes a group of predefined glyphs in the background of your letters. 
 
 ### Install
 
-In *Glyphs > Preferences > Addons > Modules*, click on the *Install Modules* button. This installs the Vanilla module by Tal Leming which is required by the *Show Siblings* plug-in.
-
-Then either:
-
 1. In *Window > Plugin Manager*, click on the *Install* button next to the *Show Siblings* entry. 
 2. Restart Glyphs.
 
-or:
-
-1. Download or clone this repository.
-2. Either:  
-   Double click the `.glyphsReporter` file and confirm the dialogue in Glyphsapp to install.  
-   Or:  
-   Copy the `.glyphsReporter` into your Glyphsapp Plugins folder (eg. `/Library/Application\ Support/Glyphs/Plugins`). You can use subfolders (e.g. to sort plugins by author) there.
-3. Restart Glyphs.
-
 ### How to use
 
-When ever you need it, toggle `Show * Siblings` from the *View* menu.
+When ever you need it, toggle `Show Siblings` from the *View* menu.
 
 ### Default groups (current status)
 
@@ -102,6 +89,22 @@ GREEK
 <img src="https://github.com/Mark2Mark/Show-Siblings/blob/master/Screenshots/ShowSiblingsPro_01.gif" alt="Show Siblings Pro Teaser" height="500px">
 
 </p>
+
+#### Features:
+
+- More Scripts: Latin, Cyrillic, Greek, Thai, Khmer, Myanmar, Hangul, …
+- “Twins” (alternative glyphs like `.ssXX` or any other suffixes).
+- Movable siblings: Perfectly position them behind the current glyph.
+- Match Highlighter: if a node of the current glyph matches a background node, you’ll get visual feedback.
+- Drawing modes:
+    + Flat filled
+    + Flat filled with outline
+    + Outline only
+    + Outline only with removed overlaps
+- Toggle display all nodes of all siblings
+- Toggle display of siblings
+- Temporary sibling: show *any* glyph in as a “sibling”. No need to paste actual glyphs or components into the background layer anymore. (And forgetting them there, cluttering your files.)
+
 
 ##### Known issues
 
