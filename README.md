@@ -21,9 +21,9 @@ When ever you need it, toggle `Show Siblings` from the *View* menu.
 
 <p align="center">
 
-<img src="https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/ShowSiblings Shequalin DeutschMark.jpg" alt="Show Siblings Shequalin Demo" height="600px">
+<img src="https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/master/Images/Shequalin DeutschMark.jpg" alt="Show Siblings Shequalin Demo" height="600px">
 
-<img src="https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/Screenshots/ShowSiblings/Screenshots/screencapDemoFont.gif" alt="Show Siblings live Demo" height="300px">
+<img src="https://github.com/Mark2Mark/Glyphsapp-Plugins/blob/master/Images/screencapDemoFont.gif" alt="Show Siblings live Demo" height="300px">
 
 </p>
 
@@ -33,7 +33,7 @@ When ever you need it, toggle `Show Siblings` from the *View* menu.
 
 <p align="center">
 
-<img src="https://github.com/Mark2Mark/Show-Siblings/blob/master/Screenshots/ShowSiblingsPro_01.gif" alt="Show Siblings Pro Teaser" height="500px">
+<img src="https://github.com/Mark2Mark/Show-Siblings/blob/master/Images/ShowSiblingsPro_01.gif" alt="Show Siblings Pro Teaser" height="500px">
 
 </p>
 
