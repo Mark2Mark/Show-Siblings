@@ -11,6 +11,8 @@
 #
 ###########################################################################################################
 
+from __future__ import division, print_function, unicode_literals
+import objc
 from GlyphsApp.plugins import *
 from vanilla import *
 import traceback
@@ -22,7 +24,8 @@ ShowSiblings2ReporterLIB = ShowSiblings2ReporterUI.ShowSiblings2ReporterLIB.Show
 
 
 class ShowSiblings(ReporterPlugin):
-
+	
+	@objc.python_method
 	def settings(self):
 
 		self.menuName = Glyphs.localize({'en': u'Siblings',}) #  👫
@@ -44,46 +47,46 @@ class ShowSiblings(ReporterPlugin):
 			return self
 		except Exception as e:
 			# self.logToConsole( "init: %s" % str(e) )
-			print "init: %s" % str(e)
-
-		
+			print("init: %s" % str(e))
 
 	def willActivate(self):
 		try:
 			self.ShowSiblings2ReporterLIB.Open()
 		except:
-			print "[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc())
+			print("[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc()))
 		# super(ShowSiblings2, self).willActivate()
 
 	def willDeactivate(self):
 		try:
 			self.ShowSiblings2ReporterLIB.Close()
 		except:
-			print "[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc())
+			print("[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc()))
 		# super(ShowSiblings2, self).willDeactivate()
 
+	@objc.python_method
 	def toggleWhoeUI(self):
 		try:
 			if self.Glyphs.font.currentTab:
-				print "TABD"
+				print("TABD")
 				self.ShowSiblings2ReporterLIB.Open()
 		except:
-			print "[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc())
+			print("[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc()))
 		# super(ShowSiblings2, self).willActivate()		
 
-
+	@objc.python_method
 	def nameOfFunction(self):
 		# use [0][3] if this function is not used nested like here
 		return "[%s]" % inspect.stack()[1][3]
-		
 
+	@objc.python_method
 	def background(self, layer):  # def foreground(self, layer):
 		try:
 			self.ShowSiblings2ReporterLIB.drawSiblings(layer, self.getScale(), isActiveLayer=True )
 		except:
-			print "[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc())
+			print("[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc()))
 
-	def inactiveLayers(self, layer):  # def foreground(self, layer):
+	@objc.python_method
+	def inactiveLayerBackground(self, layer):  # def foreground(self, layer):
 		try:
 			self.ShowSiblings2ReporterLIB.drawSiblings(layer, self.getScale() )
 
@@ -91,9 +94,7 @@ class ShowSiblings(ReporterPlugin):
 			NSColor.blackColor().set()
 			if path:
 				path.fill()
-
-
 		except:
-			print "[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc())
+			print("[%s]:\n%s" % (self.nameOfFunction(), traceback.format_exc()))
 
 

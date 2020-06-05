@@ -6,16 +6,18 @@
 
 
 
+from __future__ import print_function
+from __future__ import absolute_import
 import sys
 import objc
 from Foundation import NSAttributedString, NSRect
-from AppKit import NSApplication, NSColor, NSBezierPath, NSForegroundColorAttributeName, NSFontAttributeName
+from AppKit import NSApplication, NSColor, NSBezierPath, NSForegroundColorAttributeName, NSFontAttributeName, NSFont
 from vanilla import *
 import traceback
 
 import GlyphsApp
 
-from customSiblings import availableScripts as customAvailableScripts
+from .customSiblings import availableScripts as customAvailableScripts
 
 ##########################################################################################
 # class ShowSiblings2ReporterLib:
@@ -342,12 +344,13 @@ class ShowSiblings2ReporterLib(object):
 				NSForegroundColorAttributeName: fontColor }
 			displayText = NSAttributedString.alloc().initWithString_attributes_( text, fontAttributes )
 			textAlignment = 6 # top left: 6, top center: 7, top right: 8, center left: 3, center center: 4, center right: 5, bottom left: 0, bottom center: 1, bottom right: 2
-			glyphEditView.drawText_atPoint_alignment_( displayText, textPosition, textAlignment )
+			displayText.drawAtPoint_alignment_( textPosition, textAlignment )
 		except:
-			print traceback.format_exc()
+			print(traceback.format_exc())
 
 
-	def drawBadge(self, (x, y), size, color):
+	def drawBadge(self, xxx_todo_changeme, size, color):
+		(x, y) = xxx_todo_changeme
 		thisAlpha = 0.75
 		if color == "red":
 			thisColor = 0.5, 0.7, 0.2, thisAlpha
@@ -464,7 +467,7 @@ class reporterPreferenceWindow(object):
 			tabOutput = "/" + "/".join( [ x for x in self.parent.labelGlyphNames(self.parent.sibListCopy) ] )
 			self.parent.Font.newTab(tabOutput)
 		except:
-			print traceback.format_exc() # this does not work sometimes?!?!?!*
+			print(traceback.format_exc()) # this does not work sometimes?!?!?!*
 			# *) always after changing active layer via keys: fn+left/right
 			#    Once you clicked in the view, the tab opening works
 
